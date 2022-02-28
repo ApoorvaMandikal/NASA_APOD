@@ -8,30 +8,35 @@
     <link rel ="stylesheet" href="css/bootstrap.min.css">
     <link rel ="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"> NASA ASOD </a>
+                <h2><a class="navbar-brand" href="index.html"> NASA's ASTRONOMY PICTURE OF THE DAY </a></h2>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="jumbotron">
-            <h3 class="text-center">Search for any date</h3>
-            <form id="searchForm">
-                <input type="text" class="form-control" id="searchText" placeholder="Enter the Date you want to search">
-            </form>
+        <div class="container">
+            <div class="jumbotron">
+                <h4 class="text-center">Search for any date</h4>
+                <form id="searchForm" class="form-outline datepicker" data-mdb-toggle-button="true" data-mdb-format="yyyy-mm-dd">
+                    <input type="text" class="form-control" id="searchText" data-mdb-toggle="datepicker" placeholder="Enter the Date you want to search">
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="picture"></div>
         </div>
     </div>
 
-    <div class="container">
-        <div id="pics" class="row"></div>
-    </div>
     <script type='text/javascript' src='config.js'></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

@@ -48,9 +48,7 @@ function getPicture(){
         $('#title').html(picture.title)
         let output = '';
         output = `
-                    <div class ="well text-center">
                         <img src = '${picture.hdurl}'>
-                    </div>
             `;
         $('#pictureExp').html(output);
         $('#copyright').html(picture.copyright);

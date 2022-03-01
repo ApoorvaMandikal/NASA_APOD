@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA ASOD</title>
-    <link rel ="stylesheet" href="css/bootstrap.min.css">
     <link rel ="stylesheet" href="css/styles.css">
+    <link rel ="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" type="text/css" />
+    <script type='text/javascript' src='config.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js" type="text/javascript"></script>  
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -18,30 +24,40 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="container">
-            <div class="jumbotron">
-                <h4 class="text-center">Search for any date</h4>
-                <form id="searchForm" class="form-outline datepicker" data-mdb-toggle-button="true" data-mdb-format="yyyy-mm-dd">
-                    <input type="text" class="form-control" id="searchText" data-mdb-toggle="datepicker" placeholder="Enter the Date you want to search">
-                </form>
-            </div>
-        </div>
+    <div class="container text-center">
+        <p>
+            NASA's Astronomical Picture of the Day is widely known, each day a different image or photograph(sometimes a video) of our fascinating universe
+            is featured, along with a brief explanation written by a professional astronomer. 
+        </p>
+        <p> This website is a small usage of the beautiful service given by NASA to us where the APOD of any day can be aquired!</p>
+        <p>Discover the cosmos! </p>
+    </div>
 
-        <div class="container">
-            <div id="picture"></div>
+    <div class="container">
+        <h4 class="text-center">Search for any date</h4>
+        <div id="searchBar">
+            <form id="searchForm">
+                <input type="text" id="searchText" placeholder="YYYY-MM-DD" class="form-control date-input" data-date-inline-picker="true"> 
+            </form>
         </div>
     </div>
 
-    <script type='text/javascript' src='config.js'></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        $( function() {
-          $( "#searchText" ).datepicker();
-        } );
-    </script>
+    <div class="container">
+        <div id="picture"></div>
+    </div>
+
+    
+    <!--Footer-->
+    <footer class="bg-light page-footer font-small mt-auto">
+        <div class="container-fluid text-center text-md-left">
+            <p>
+                This app uses the <b><i>NASA APOD API</i></b> (which can be found
+                <a href="https://api.nasa.gov/index.html"> here</a> )
+                and presents the best astrophotographic photo of NASA resources every day. 
+            </p>
+        </div>      
+     </footer>
+
 
 </body>
 </html>

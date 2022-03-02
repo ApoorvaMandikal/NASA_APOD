@@ -1,5 +1,48 @@
+body {
+    background-image:url('./../assets/bg-green.jpg');
+}
+
+.navbar-default{
+    background-color: black;
+    height: 70px;
+}
+
+.navbar-header{
+    display: flex;
+}
+
+.logo{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: inline-blockflec;
+    position: absolute;
+    top : 0;
+}
+
 #picture img, #pictureExp img{
     width: 100%;
+}
+
+#picture img:hover{
+    opacity: 0.7;
+  }
+
+.hero {
+    min-height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#intro{
+    background-color: black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    width: 50%;
 }
 
 .container #picture{
@@ -19,4 +62,5 @@
 .flex-child:first-child {
     margin-right: 20px;
 } 
+
 

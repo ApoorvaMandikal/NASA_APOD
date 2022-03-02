@@ -16,40 +16,47 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+    
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header">
-                <h2><a class="navbar-brand" href="index.html"> NASA's ASTRONOMY PICTURE OF THE DAY </a></h2>
+            <div class="navbar-header flex">
+                <a class="navbar-brand" href="index.html">
+                <div class="flex-child"> <img class="logo" src="assets/nasa-logo.jpg"> </div>
+                <div style="margin-left: 130px ;">NASA's ASTRONOMY PICTURE OF THE DAY </div></a>
             </div>
         </div>
     </nav>
 
-    <div class="container text-center">
-        <p>
-            NASA's Astronomical Picture of the Day is widely known, each day a different image or photograph(sometimes a video) of our fascinating universe
-            is featured, along with a brief explanation written by a professional astronomer. 
-        </p>
-        <p> This website is a small usage of the beautiful service given by NASA to us where the APOD of any day can be aquired!</p>
-        <p>Discover the cosmos! </p>
-    </div>
-
-    <div class="container">
-        <h4 class="text-center">Search for any date</h4>
-        <div id="searchBar">
-            <form id="searchForm">
-                <input type="text" id="searchText" placeholder="YYYY-MM-DD" class="form-control date-input" data-date-inline-picker="true"> 
-            </form>
-        </div>
-    </div>
-
-    <div class="container">
-        <div id="picture"></div>
-    </div>
-
     
+        
+        <center>
+        <div class="container text-center" id="intro">
+            <p class="note note-primary">
+                NASA's Astronomical Picture of the Day is widely known, each day a different image or photograph(sometimes a video) of our fascinating universe
+                is featured, along with a brief explanation written by a professional astronomer. 
+            <br><br>
+             This website is a small usage of the beautiful service given by NASA to us where the APOD of any day can be aquired!
+            <br><b><i>Discover the cosmos!</i></b> </p>
+        </div>
+        </center>
+
+        <div class="container">
+            <h4 class="text-center">Search for any date</h4>
+            <div id="searchBar">
+                <form id="searchForm">
+                    <input type="text" id="searchText" placeholder="YYYY-MM-DD" class="form-control date-input" data-date-inline-picker="true"> 
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="picture"></div>
+        </div>
+
+
     <!--Footer-->
     <footer class="bg-light page-footer font-small mt-auto">
-        <div class="container-fluid text-center text-md-left">
+        <div class="container-fluid text-center">
             <p>
                 This app uses the <b><i>NASA APOD API</i></b> (which can be found
                 <a href="https://api.nasa.gov/index.html"> here</a> )
